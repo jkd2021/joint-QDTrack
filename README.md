@@ -1,5 +1,4 @@
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/prototypical-cross-attention-networks-for/multi-object-tracking-and-segmentation-on-2)](https://paperswithcode.com/sota/multi-object-tracking-and-segmentation-on-2?p=prototypical-cross-attention-networks-for)
-# Prototypical Cross-Attention Networks for Multiple Object Tracking and Segmentation
+# Jointly constructed [QDTrack-mots](https://github.com/SysCV/qdtrack) model for joint training of the functional heads (Mask Heads / BBox Heads) in its original Mask R-CNN architecture
 
 
 
