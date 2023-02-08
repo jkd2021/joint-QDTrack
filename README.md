@@ -1,10 +1,13 @@
 # Implementations of 1. jointly constructed [QDTrack-mots](https://github.com/SysCV/qdtrack) & 2. [PCAN](https://github.com/SysCV/pcan) on SAIL-VOS(cut) datasets 
 
+## Datasets:
+[SAIL-VOS](https://sailvos.web.illinois.edu/_site/index.html) & SAIL-VOScut
+
 ## Amodal & Visible: QDTrack-mots-joint(+)
 Using joint construction of the functional heads (Mask Heads / BBox Heads) in the original Mask R-CNN architecture of QDTrack-mots for joint training research.
 
 ## Amodal / Visible: (Amodal)QDTrack-mots & (Amodal)PCAN
-Please refer to [qdtrack](https://github.com/SysCV/qdtrack) & [PCAN](https://github.com/SysCV/pcan) for details.
+Please refer to [QDTrack](https://github.com/SysCV/qdtrack) & [PCAN](https://github.com/SysCV/pcan) for details.
 
 ## Installation
 
