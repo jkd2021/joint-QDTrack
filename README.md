@@ -1,7 +1,7 @@
 # Implementations of Video Instance Segmentation methods on amodal video datasets 
 
 ## Datasets:
-[SAIL-VOS](https://sailvos.web.illinois.edu/_site/index.html) & SAIL-VOScut
+[SAIL-VOS](https://sailvos.web.illinois.edu/_site/index.html) & SAIL-VOScut (videos split into video-cuts without abrupt scene change)
 
 ## Amodal & Visible: QDTrack-mots-joint(+)
 Using joint construction of the functional heads (Mask Heads / BBox Heads) in the original Mask R-CNN architecture of [QDTrack-mots](https://github.com/SysCV/qdtrack) for joint training research.
