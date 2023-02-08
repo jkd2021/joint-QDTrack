@@ -1,0 +1,128 @@
+copy the entire folder /beegfs/work/shared/kangdong_shared/env/qdtrack_joint/
+    to your own conda environment root, e.g. /home/yourname/.conda/envs/
+
+use following commands to set up the environment:
+    module load anaconda
+    source activate qdtrack_joint
+    cd /beegfs/work/yourname/amodal-qdtrack (your local root of this repo)
+    python setup.py develop
+    cd mmtracking-0.5.1
+    python setup.py develop
+
+
+1. (Amodal)QDTrack-mots
+    (1) train (Amodal)QDTrack-mots on SAIL-VOS(cut) from scatch:
+      in ./tools/train.py:
+        1. set "--config" as "../configs/QDTrack_mots.py"
+        2. set the "--work-dir" as the dir you wish
+        3. uncomment line 31 for training without validation (it's better to use train with val after the first two epoches, before that OOM could somehow happen)
+      in ./configs/QDTrack_mots.py:
+        1. using Resnet-50: comment lines 7~12,226,255 and uncomment lines 225,254 (default is ResNeXt101)
+        2. adjust lines 87 & 88 for different backbones
+        3. choose "data_root" at lines 42 & 43 as the path for SAIL-VOS or SAIL-VOScut
+        4. set ann_file & img_prefix under data.train & data.val for amodal/modal SAIL-VOS/SAIL-VOScut train & val
+
+      cd ./tools , sbatch slurm_train.sh
+
+   (2) test (Amodal)QDTrack-mots on the SAIL-VOS(cut):
+      in ./tools/test.py:
+        1. set "--config" as "../configs/QDTrack_mots.py"
+        2. set the "--checkpoint" as the .pth file you want to test
+        3. set the "--out" as the place to save the output .pkl file (switch lines 22 & 23 if not needed)
+        4. uncomment the line 47 to set a place for visualization if needed (test speed will reduce a lot)
+        5. set a threshold value at line 59 for '--show_score_thr'
+
+      in ./configs/QDTrack_mots.py:
+        1. choose "data_root" at lines 42 & 43 as the path for SAIL-VOS or SAIL-VOScut
+        2. set ann_file & img_prefix under data.test for amodal/modal SAIL-VOS/SAIL-VOScut test
+
+      cd ./tools , sbatch slurm_test.sh
+
+2. (Amodal)PCAN
+    (1) train (Amodal)PCAN on SAIL-VOS(cut):
+      in ./tools/train.py:
+        1. set "--config" as "../configs/QDTrack_PCAN_fixed_refine.py"
+        2. set the "--work-dir" as the dir you wish
+        3. uncomment line 31 for training without validation (it's better to use train with val after the first two epoches, before that OOM could somehow happen)
+      in ./configs/QDTrack_PCAN_fixed_refine.py:
+        1. set the (Amodal)QDTrack-mots weight file at line 190 (here (Amodal)QDTrack-mots works as detector for PCAN)
+        2. if the used weight is trained from Resnet50, comment lines 7~12 in ../configs/QDTrack_mots.py
+        3. choose "data_root" at lines 37 & 38 as the path for SAIL-VOS or SAIL-VOScut
+        4. set ann_file & img_prefix under data.train & data.val for amodal/modal SAIL-VOS/SAIL-VOScut train & val
+
+      cd ./tools , sbatch slurm_train.sh
+
+   (2) test (Amodal)PCAN on the SAIL-VOS(cut):
+      in ./tools/test.py:
+        1. set "--config" as "../configs/QDTrack_PCAN_fixed_refine.py"
+        2. set the "--checkpoint" as the .pth file you want to test
+        3. set the "--out" as the place to save the output .pkl file (switch lines 22 & 23 if not needed)
+        4. uncomment the line 47 to set a place for visualization if needed (test speed will reduce a lot)
+        5. set a threshold value at line 59 for '--show_score_thr'
+
+      in ./configs/QDTrack_PCAN_fixed_refine.py:
+        1. choose "data_root" at lines 37 & 38 as the path for SAIL-VOS or SAIL-VOScut
+        2. set ann_file & img_prefix under data.test for amodal/modal SAIL-VOS/SAIL-VOScut test
+
+      cd ./tools , sbatch slurm_test.sh
+
+3. QDTrack-mots-joint
+   (1) train QDTrack-mots-joint on SAIL-VOS(cut) from scatch:
+      in ./tools/train.py:
+        1. set "--config" as "../configs/QDTrack_mots_joint.py"
+        2. set the "--work-dir" as the dir you wish
+        3. uncomment line 31 for training without validation (it's better to use train with val after the first two epoches, before that OOM could somehow happen)
+      in ./configs/QDTrack_mots_joint.py:
+        1. set visible_mask_head loss & amodal_mask_head loss at lines 30 & 43
+        2. choose "data_root" at lines 55 & 56 as the path for SAIL-VOS or SAIL-VOScut
+        3. set ann_file & img_prefix under data.train & data.val for train & val on SAIL-VOS or SAIL-VOScut
+
+      cd ./tools , sbatch slurm_train.sh
+
+   (2) test QDTrack-mots-joint on the SAIL-VOS(cut):
+      in ./tools/test.py:
+        1. set "--config" as "../configs/QDTrack_mots_joint.py"
+        2. set the "--checkpoint" as the .pth file you want to test
+        3. set the "--out" as the place to save the output .pkl file (switch lines 22 & 23 if not needed)
+        4. uncomment the line 47 to set a place for visualization if needed (test speed will reduce a lot)
+        5. set a threshold value at line 59 for '--show_score_thr'
+
+      in ./configs/QDTrack_mots_joint.py:
+        1. choose "data_root" at lines 55 & 56 as the path for SAIL-VOS or SAIL-VOScut
+        2. set ann_file & img_prefix under data.test for test on SAIL-VOS or SAIL-VOScut
+
+      cd ./tools , sbatch slurm_test.sh
+      
+4. QDTrack-mots-joint+
+   (1) train QDTrack-mots-joint+ on SAIL-VOS(cut) from scatch:
+      in ./tools/train.py:
+        1. set "--config" as "../configs/QDTrack_mots_joint+.py"
+        2. set the "--work-dir" as the dir you wish
+        3. uncomment line 31 for training without validation (it's better to use train with val after the first two epoches, before that OOM could somehow happen)
+      in ./configs/QDTrack_mots_joint+.py:
+        1. set losses of visible_bbox_head & amodal_bbox_head & visible_mask_head & amodal_mask_head at lines 42~45 & 59 & 72
+        2. choose "data_root" at lines 84 & 85 as the path for SAIL-VOS or SAIL-VOScut
+        3. set ann_file & img_prefix under data.train & data.val for train & val on SAIL-VOS or SAIL-VOScut
+
+      cd ./tools , sbatch slurm_train.sh
+
+   (2) test QDTrack-mots-joint+ on the SAIL-VOS(cut):
+      in ./tools/test.py:
+        1. set "--config" as "../configs/QDTrack_mots_joint+.py"
+        2. set the "--checkpoint" as the .pth file you want to test
+        3. set the "--out" as the place to save the output .pkl file (switch lines 22 & 23 if not needed)
+        4. uncomment the line 47 to set a place for visualization if needed (test speed will reduce a lot)
+        5. set a threshold value at line 59 for '--show_score_thr'
+
+      in ./configs/QDTrack_mots_joint+.py:
+        1. choose "data_root" at lines 84 & 85 as the path for SAIL-VOS or SAIL-VOScut
+        2. set ann_file & img_prefix under data.test for test on SAIL-VOS or SAIL-VOScut
+
+      cd ./tools , sbatch slurm_test.sh
+
+
+None:
+    when facing "RuntimeError: operation does not have an identity.", don't worry, just resume the previous epoch's
+    checkpoint at line 26 in ./tools/train.py to resume the training. (the cause for that is probably the limit of
+    the batch size, which is set to 4 when using the ResNeXt101 backbone, a bigger batch size is expected to eliminate
+    this problem of unstability in the training, however, the single A100 GPU's max memory of 40GB constaint that)
