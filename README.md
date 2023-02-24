@@ -3,24 +3,24 @@
 ## Datasets:
 [SAIL-VOS](https://sailvos.web.illinois.edu/_site/index.html) & SAIL-VOScut (videos split into video-cuts without abrupt scene change)
 
-amodal annotations: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; visible annotations:
+amodal annotations: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; visible annotations:
 
-<img src="figures/amo_anno.png" width="350"> &emsp; &emsp; <img src="figures/vis_anno.png" width="350">
+<img src="figures/amo_anno.png" width="375"> &emsp; &emsp; <img src="figures/vis_anno.png" width="375">
 
 ## Amodal & Visible: QDTrack-mots-joint(+)
 Using joint construction of the functional heads (Mask Heads / BBox Heads) in the original Mask R-CNN architecture of [QDTrack-mots](https://github.com/SysCV/qdtrack) for joint training research.
 
 > **QDTrack-mots-joint testing results:**
 
-amodal results: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; visible results:
+amodal results: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; visible results:
 
-<img src="figures/amo_joint.png" width="350"> &emsp; &emsp; <img src="figures/vis_joint.png" width="350">
+<img src="figures/amo_joint.png" width="375"> &emsp; &emsp; <img src="figures/vis_joint.png" width="375">
 
 > **QDTrack-mots-joint+ testing results:**
 
-amodal results: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; visible results:
+amodal results: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; visible results:
 
-<img src="figures/amo_joint+.png" width="350"> &emsp; &emsp; <img src="figures/vis_joint+.png" width="350">
+<img src="figures/amo_joint+.png" width="375"> &emsp; &emsp; <img src="figures/vis_joint+.png" width="375">
 
 
 ## Amodal / Visible: (Amodal)QDTrack-mots & (Amodal)PCAN
