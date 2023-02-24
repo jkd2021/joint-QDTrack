@@ -10,11 +10,18 @@ amodal annotations: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 ## Amodal & Visible: QDTrack-mots-joint(+)
 Using joint construction of the functional heads (Mask Heads / BBox Heads) in the original Mask R-CNN architecture of [QDTrack-mots](https://github.com/SysCV/qdtrack) for joint training research.
 
-&emsp; QDTrack-mots-joint testing results:
+> **QDTrack-mots-joint testing results:**
 
 amodal results: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; visible results:
 
 <img src="figures/amo_joint.png" width="350"> &emsp; &emsp; <img src="figures/vis_joint.png" width="350">
+
+> **QDTrack-mots-joint+ testing results:**
+
+amodal results: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; visible results:
+
+<img src="figures/amo_joint+.png" width="350"> &emsp; &emsp; <img src="figures/vis_joint+.png" width="350">
+
 
 ## Amodal / Visible: (Amodal)QDTrack-mots & (Amodal)PCAN
 Please refer to [QDTrack](https://github.com/SysCV/qdtrack) & [PCAN](https://github.com/SysCV/pcan) for details.
