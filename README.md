@@ -2,7 +2,7 @@
 
 ## Datasets:
 [SAIL-VOS](https://sailvos.web.illinois.edu/_site/index.html) & SAIL-VOScut (videos split into video-cuts without abrupt scene change)
-<img src="figures/amo_anno.png" width="800"><img src="figures/vis_anno.png" width="800">
+<img src="figures/amo_anno.png" width="400"><img src="figures/vis_anno.png" width="400">
 
 ## Amodal & Visible: QDTrack-mots-joint(+)
 Using joint construction of the functional heads (Mask Heads / BBox Heads) in the original Mask R-CNN architecture of [QDTrack-mots](https://github.com/SysCV/qdtrack) for joint training research.
