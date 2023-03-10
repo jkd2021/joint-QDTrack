@@ -26,10 +26,6 @@ amodal results: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ems
 ## Amodal / Visible: (Amodal)QDTrack-mots & (Amodal)PCAN
 Please refer to [QDTrack](https://github.com/SysCV/qdtrack) & [PCAN](https://github.com/SysCV/pcan) for details.
 
-## Installation
-
-## Usages
-
 ## References
 ```
 @inproceedings{pang2021quasi,
