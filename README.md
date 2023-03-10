@@ -28,6 +28,13 @@ Please refer to [QDTrack](https://github.com/SysCV/qdtrack) & [PCAN](https://git
 
 ## References
 ```
+@inproceedings{hu2019sail,
+  title={Sail-vos: Semantic amodal instance level video object segmentation-a synthetic dataset and baselines},
+  author={Hu, Yuan-Ting and Chen, Hong-Shuo and Hui, Kexin and Huang, Jia-Bin and Schwing, Alexander G},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3105--3115},
+  year={2019}
+}
 @inproceedings{pang2021quasi,
   title={Quasi-dense similarity learning for multiple object tracking},
   author={Pang, Jiangmiao and Qiu, Linlu and Li, Xia and Chen, Haofeng and Li, Qi and Darrell, Trevor and Yu, Fisher},
