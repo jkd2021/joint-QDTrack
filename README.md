@@ -23,8 +23,9 @@ amodal results: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ems
 <img src="figures/amo_joint+.png" width="375"> &emsp; &emsp; <img src="figures/vis_joint+.png" width="375">
 
 
-## Amodal / Visible: (Amodal)QDTrack-mots & (Amodal)PCAN
-Please refer to [QDTrack](https://github.com/SysCV/qdtrack) & [PCAN](https://github.com/SysCV/pcan) for details.
+## Amodal / Visible:  
+Please refer to [QDTrack](https://github.com/SysCV/qdtrack) for details of (Amodal)QDTrack-mots 
+Please refer to [PCAN](https://github.com/SysCV/pcan) for details of (Amodal)PCAN
 
 ## References
 ```
