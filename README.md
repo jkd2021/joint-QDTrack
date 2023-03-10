@@ -24,7 +24,7 @@ amodal results: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ems
 
 
 ## Amodal / Visible:  
-Please refer to [QDTrack](https://github.com/SysCV/qdtrack) for details of (Amodal)QDTrack-mots 
+Please refer to [QDTrack](https://github.com/SysCV/qdtrack) for details of (Amodal)QDTrack-mots \
 Please refer to [PCAN](https://github.com/SysCV/pcan) for details of (Amodal)PCAN
 
 ## References
